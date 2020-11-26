@@ -103,4 +103,8 @@ with tf.Session(graph=tf.Graph()) as sess:
     saver = tf.train.Saver()
     ckpt = tf.train.latest_checkpoint(os.path.join('models', model_name))
     saver.restore(sess, ckpt)
-    client.run('')
+
+    with open('config/conf.json') as config_file:
+        data = json.load(config_file)
+
+    client.run(data['token'])
