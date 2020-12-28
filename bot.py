@@ -74,7 +74,7 @@ length=20
 temperature=1
 top_k=40
 input_text=""
-model_name='345M'
+model_name='124M'
 enc = encoder.get_encoder(model_name)
 hparams = model.default_hparams()
 
